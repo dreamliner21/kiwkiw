@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>kiw-kiw</title>
+    <meta charset="utf-8">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .letter {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff8e8e;
+        }
+
+        .whatsapp-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #25D366;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="letter">
+            <h2 class="title">To My Special Someone</h2>
+            <p class="message">I have been wanting to tell you that...</p>
+            <p class="message hidden" id="message">I'm deeply in love with you. You mean the world to me and I can't imagine my life without you. Every moment with you is a treasure and I cherish it with all my heart.</p>
+            <button class="button" onclick="revealMessage()">Reveal My Feelings</button>
+            <a class="whatsapp-button hidden" href="https://wa.me/62882008544437?text=I%20love%20you%20very%20much!">Chat on WhatsApp</a>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            var message = document.getElementById("message");
+            message.classList.remove("hidden");
+            
+            var revealButton = document.querySelector('.button');
+            revealButton.style.display = "none";
+            
+            var whatsappButton = document.querySelector('.whatsapp-button');
+            whatsappButton.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
